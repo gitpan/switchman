@@ -1,0 +1,40 @@
+---
+abstract: 'flock-style distributed locks and semaphores'
+author:
+  - 'Oleg Komarov <komarov@cpan.org>'
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: switchman
+requires:
+  File::Basename: 0
+  File::Slurp: 0
+  Getopt::Long: 0
+  JSON: 0
+  Linux::MemInfo: 0
+  List::MoreUtils: 0
+  List::Util: 0
+  Log::Dispatch: 2.35
+  Moo: 1.002000
+  Net::Ping: 0
+  Net::ZooKeeper: 0
+  Net::ZooKeeper::Lock: 0.03
+  Net::ZooKeeper::Semaphore: 0
+  POSIX: 0
+  Parse::Crontab: 0
+  Pod::Usage: 0
+  Sys::CPU: 0
+  Sys::Hostname::FQDN: 0
+  Text::ParseWords: 0
+  strict: 0
+  warnings: 0
+resources:
+  homepage: https://github.com/komarov/switchman
+  repository: git://github.com/komarov/switchman.git
+version: 1.00

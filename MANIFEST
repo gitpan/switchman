@@ -1,0 +1,12 @@
+Changes
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README.md
+bin/check_switchman_groups
+bin/check_switchman_hosts
+bin/switchman
+dist.ini
+flow.dot
+lib/App/Switchman.pm
