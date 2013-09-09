@@ -17,9 +17,9 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "switchman",
   "EXE_FILES" => [
+    "bin/switchman",
     "bin/check_switchman_groups",
-    "bin/check_switchman_hosts",
-    "bin/switchman"
+    "bin/check_switchman_hosts"
   ],
   "LICENSE" => "perl",
   "NAME" => "switchman",
@@ -46,7 +46,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.00",
+  "VERSION" => "1.01",
   "test" => {
     "TESTS" => ""
   }
