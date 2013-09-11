@@ -14,7 +14,7 @@ This znode is also used to store the data that describes groups.
 
 ## OPTIONS
 
-- -c|--config /path/to/config
+- \-c|--config /path/to/config
 
 Optional, default is /etc/switchman.conf
 
@@ -32,7 +32,7 @@ Example:
         "logfile":"/path/to/log"
     }
 
-- -g|--group group\_name
+- \-g|--group group\_name
 
 Optional, if specified must be one of the groups described in prefix znode.
 
@@ -41,7 +41,7 @@ the current host is specified in group description.
 
 Example (data stored prefix znode):
 
-    {"groups":{"group1":["host1", "host2"], "group2":"host1"}}
+    {"groups":{"group1":["host1","host2"],"group2":"host1"}}
 
 Then if you execute
     
@@ -50,9 +50,16 @@ Then if you execute
 
 switchman will exit immediately.
 
+Also you can refer to groups from other groups:
+
+    {"groups":{"group1":["host1","group3"],"group2":"host1","group3":"host2"}}
+
+The logic is the following: if a value in a group description isn't found among
+group names it is treated as a host name.
+
 Note: all host names MUST be fqdns.
 
-- --lease resource=count:total
+- \--lease resource=count:total
 
 Optional, multiple leases for different resources are supported.
 
@@ -61,7 +68,7 @@ the order specified in prefix znode.
 
 Example (data stored prefix znode):
 
-    {"resources": ["FQDN\_mem", "FQDN\_cpu"]}
+    {"resources": ["FQDN_mem", "FQDN_cpu"]}
 
 Processes wait for resources in fair queues, watching for the lock to appear.
 If the lock appears, all enqueued processes that were watching for it will exit.
@@ -76,9 +83,9 @@ MEMMB is expanded into total amount of physical memory in megabytes.
 You can use strings representing Perl expressions for "count" and "total"
 parameters, but make sure these expressions return an integer value when evaled:
 
-    --lease FQDN\_mem='4:int(MEMMB/1024)' # leases 4 GB
+    --lease FQDN_mem='4:int(MEMMB/1024)' # leases 4 GB
 
-- --lockname name
+- \--lockname name
 
 Optional, default is CMD's basename.
 
@@ -86,7 +93,7 @@ A name for a lock to be acquired in ZooKeeper.
 
 Lock is implemented as an ephemeral node /myproject/switchman/locks/name
 
-- -h|--help
+- \-h|--help
 
 Show this help and exit.
 
@@ -123,7 +130,7 @@ specific to the given host when the lease is acquired
 
 - Leasing local resources
 
-    switchman --lease FQDN\_cpu=1:CPU --lease FQDN\_mem=4096:MEMMB -- cmd
+    switchman --lease FQDN_cpu=1:CPU --lease FQDN_mem=4096:MEMMB -- cmd
 
 leases 1 cpu core, 4 GB of memory (exclusive lock is also acquired)
 

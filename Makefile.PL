@@ -11,15 +11,18 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "flock-style distributed locks and semaphores",
   "AUTHOR" => "Oleg Komarov <komarov\@cpan.org>",
-  "BUILD_REQUIRES" => {},
+  "BUILD_REQUIRES" => {
+    "Test::Deep" => 0,
+    "Test::More" => 0
+  },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "switchman",
   "EXE_FILES" => [
-    "bin/switchman",
     "bin/check_switchman_groups",
-    "bin/check_switchman_hosts"
+    "bin/check_switchman_hosts",
+    "bin/switchman"
   ],
   "LICENSE" => "perl",
   "NAME" => "switchman",
@@ -46,9 +49,9 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.01",
+  "VERSION" => "1.02",
   "test" => {
-    "TESTS" => ""
+    "TESTS" => "t/*.t"
   }
 );
 

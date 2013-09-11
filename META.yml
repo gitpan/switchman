@@ -2,11 +2,13 @@
 abstract: 'flock-style distributed locks and semaphores'
 author:
   - 'Oleg Komarov <komarov@cpan.org>'
-build_requires: {}
+build_requires:
+  Test::Deep: 0
+  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300005, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -37,4 +39,4 @@ requires:
 resources:
   homepage: https://github.com/komarov/switchman
   repository: git://github.com/komarov/switchman.git
-version: 1.01
+version: 1.02

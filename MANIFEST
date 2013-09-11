@@ -10,3 +10,4 @@ bin/switchman
 dist.ini
 flow.dot
 lib/App/Switchman.pm
+t/get_group_hosts.t
