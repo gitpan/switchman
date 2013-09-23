@@ -43,13 +43,14 @@ my %WriteMakefileArgs = (
     "POSIX" => 0,
     "Parse::Crontab" => 0,
     "Pod::Usage" => 0,
+    "Scalar::Util" => 0,
     "Sys::CPU" => 0,
     "Sys::Hostname::FQDN" => 0,
     "Text::ParseWords" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.02",
+  "VERSION" => "1.03",
   "test" => {
     "TESTS" => "t/*.t"
   }
