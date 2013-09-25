@@ -40,4 +40,4 @@ requires:
 resources:
   homepage: https://github.com/komarov/switchman
   repository: git://github.com/komarov/switchman.git
-version: 1.03
+version: 1.04
