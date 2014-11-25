@@ -1,6 +1,6 @@
 package App::Switchman;
 
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 =head1 NAME
 
@@ -605,7 +605,7 @@ sub wait_in_queue
 
         my $first_watch = $self->zkh->watch();
         my $first_exists = $self->zkh->exists("$queue_path/$positions{$first}", watch => $first_watch);
-        if (my $error = $self->zkh->get_error) {
+        if ((my $error = $self->zkh->get_error) && $self->zkh->get_error != ZNONODE) {
             $self->_error("Could not check $positions{$first} existence: $error");
         }
         if ($first_exists) {
@@ -685,7 +685,7 @@ __END__
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012-2013 by Yandex LLC.
+This software is copyright (c) 2012-2014 by Yandex LLC.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
