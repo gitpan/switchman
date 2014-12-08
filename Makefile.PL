@@ -38,6 +38,7 @@ my %WriteMakefileArgs = (
     "Net::ZooKeeper" => 0,
     "Net::ZooKeeper::Lock" => "0.03",
     "Net::ZooKeeper::Semaphore" => 0,
+    "Net::Zookeeper" => "0.36",
     "POSIX" => 0,
     "Parse::Crontab" => 0,
     "Pod::Usage" => 0,
@@ -52,7 +53,7 @@ my %WriteMakefileArgs = (
     "Test::Deep" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "1.06",
+  "VERSION" => "1.07",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -73,6 +74,7 @@ my %FallbackPrereqs = (
   "Net::ZooKeeper" => 0,
   "Net::ZooKeeper::Lock" => "0.03",
   "Net::ZooKeeper::Semaphore" => 0,
+  "Net::Zookeeper" => "0.36",
   "POSIX" => 0,
   "Parse::Crontab" => 0,
   "Pod::Usage" => 0,

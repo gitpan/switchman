@@ -28,6 +28,7 @@ requires:
   Net::ZooKeeper: 0
   Net::ZooKeeper::Lock: 0.03
   Net::ZooKeeper::Semaphore: 0
+  Net::Zookeeper: 0.36
   POSIX: 0
   Parse::Crontab: 0
   Pod::Usage: 0
@@ -40,4 +41,4 @@ requires:
 resources:
   homepage: https://github.com/komarov/switchman
   repository: git://github.com/komarov/switchman.git
-version: 1.06
+version: 1.07
